@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sweet Caroline Cakes | Custom cakes, recipes and baking supplies in Nairobi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#e8467c;--deep:#a3194f;--blush:#ffe3ee;--cream:#fff8fa;--ink:#3b1226;--gold:#d9a441;--mint:#bfe9d6}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+a{color:inherit}button,input,select,textarea{font:inherit}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:18px;padding:12px 5%;background:#fffffff0;backdrop-filter:blur(8px);border-bottom:2px solid var(--blush)}
+nav b{font:800 1.4rem 'Playfair Display',serif;color:var(--deep);margin-right:auto}
+nav a{text-decoration:none;font-weight:700;font-size:.95rem}nav a:hover{color:var(--rose)}
+.btn{background:var(--rose);color:#fff;border:0;padding:11px 22px;border-radius:30px;font-weight:700;cursor:pointer;box-shadow:0 6px 16px #e8467c44;transition:.2s}
+.btn:hover{background:var(--deep);transform:translateY(-2px)}.btn.alt{background:#fff;color:var(--deep);box-shadow:none;border:2px solid var(--rose)}
+.btn.sm{padding:6px 14px;font-size:.85rem}:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:30px;padding:70px 5%;background:radial-gradient(circle at 80% 20%,#ffc2d9,transparent 55%),linear-gradient(135deg,#ffe3ee,#fff1d9)}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.4rem);color:var(--deep)}.hero h1 i{color:var(--rose)}
+.hero p{font-size:1.15rem;margin:18px 0 26px;max-width:480px}.hero .btn{margin-right:10px}
+.hero svg{width:100%;max-width:460px;justify-self:center;animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px)}}@media(prefers-reduced-motion:reduce){.hero svg{animation:none}}
+.strip{display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;background:var(--deep);color:#fff;padding:14px 5%;font-weight:700}
+section{padding:64px 5%}section>h2{font-size:2.2rem;color:var(--deep);text-align:center}
+section>p.sub{text-align:center;margin:8px auto 30px;max-width:560px}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.tabs button{border:2px solid var(--rose);background:#fff;color:var(--deep);padding:6px 16px;border-radius:20px;font-weight:700;cursor:pointer}
+.tabs button.on{background:var(--rose);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border-radius:26px 26px 18px 18px;overflow:hidden;box-shadow:0 10px 30px #a3194f1c;display:flex;flex-direction:column}
+.card .im{height:190px;display:grid;place-items:center;background-size:cover;background-position:center}
+.card .im svg{width:130px}.card .bd{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:1.25rem}.tag{font-size:.8rem;background:var(--blush);color:var(--deep);padding:2px 10px;border-radius:12px;align-self:flex-start;font-weight:700}
+.price{font:800 1.2rem 'Playfair Display',serif;color:var(--rose)}.card small{color:#7a4a60}.row{display:flex;gap:8px;margin-top:auto;align-items:center;flex-wrap:wrap}
+.alt-bg{background:linear-gradient(180deg,var(--blush),var(--cream))}
+.panel{max-width:760px;margin:auto;background:#fff;padding:28px;border-radius:26px;box-shadow:0 10px 30px #a3194f1c}
+label{display:block;font-weight:700;margin:12px 0 4px;font-size:.92rem}
+input,select,textarea{width:100%;padding:10px 14px;border:2px solid var(--blush);border-radius:14px;background:var(--cream)}input:focus,select:focus,textarea:focus{border-color:var(--rose);outline:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#m{position:fixed;inset:0;background:#3b126a66;display:none;place-items:center;z-index:50;padding:16px}
+#m.open{display:grid}#mb{background:#fff;border-radius:26px;padding:26px;max-width:560px;width:100%;max-height:90vh;overflow:auto;position:relative}
+#x{position:absolute;right:14px;top:10px;background:0;border:0;font-size:1.8rem;cursor:pointer;color:var(--deep)}
+.o{border:2px solid var(--blush);border-radius:16px;padding:12px 16px;margin:10px 0}
+.st{font-weight:800;padding:2px 10px;border-radius:12px;font-size:.8rem;background:var(--blush);color:var(--deep)}
+.st.Ready,.st.Delivered{background:var(--mint);color:#0b5a3a}
+#t{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--deep);color:#fff;padding:12px 24px;border-radius:30px;display:none;z-index:99}
+footer{background:var(--ink);color:#ffd9e6;text-align:center;padding:36px 5%}
+@media(max-width:760px){.hero{grid-template-columns:1fr}nav a.h{display:none}.two{grid-template-columns:1fr}}
+</style></head><body>
+<nav><b>Sweet Caroline Cakes</b><a class="h" href="#cakes">Cakes</a><a class="h" href="#shop">Baking shop</a><a class="h" href="#recipes">Recipes</a><a class="h" href="#request">Services</a>
+<a href="#" id="cartB">Cart (<span id="cc">0</span>)</a><button class="btn sm" id="pB">Sign in</button></nav>
+
+<header class="hero"><div><h1>Cakes that make the room go <i>quiet</i>, then cheer.</h1>
+<p>Birthday, wedding and celebration cakes baked fresh in Nairobi. Order online, track it in your portal, and pick up baking supplies for your own bakes.</p>
+<a class="btn" href="#cakes">Order a cake</a><a class="btn alt" href="#request">Request a custom design</a></div>
+<svg viewBox="0 0 300 300" aria-hidden="true"><ellipse cx="150" cy="268" rx="120" ry="14" fill="#e8467c33"/>
+<rect x="40" y="190" width="220" height="70" rx="16" fill="#f7a8c4"/><path d="M40 205q18 22 37 0t37 0 37 0 37 0 37 0v-15H40z" fill="#fff"/>
+<rect x="70" y="125" width="160" height="65" rx="14" fill="#e8467c"/><path d="M70 140q16 20 32 0t32 0 32 0 32 0v-15H70z" fill="#fff"/>
+<rect x="100" y="70" width="100" height="55" rx="12" fill="#a3194f"/><path d="M100 84q12 16 25 0t25 0 25 0v-14h-75z" fill="#ffe3ee"/>
+<g fill="#d9a441"><circle cx="85" cy="232" r="6"/><circle cx="150" cy="238" r="6"/><circle cx="215" cy="232" r="6"/><circle cx="110" cy="160" r="5"/><circle cx="190" cy="160" r="5"/></g>
+<rect x="147" y="38" width="6" height="32" fill="#fff"/><path d="M150 18q10 12 0 22q-10-10 0-22z" fill="#ffb703"/>
+<circle cx="150" cy="104" r="10" fill="#e8467c"/></svg></header>
+<div class="strip"><span>Same-day delivery in Nairobi</span><span>Fresh ingredients, no shortcuts</span><span>Custom designs for every budget</span></div>
+
+<section id="cakes"><h2>Our cakes</h2><p class="sub">Every cake lists its ingredients. Tap one to see details and order.</p><div class="tabs" id="ct"></div><div class="grid" id="cg"></div></section>
+<section id="shop" class="alt-bg"><h2>Baking shop</h2><p class="sub">Everything you need to bake like a pro: tools, colours, boards and boxes.</p><div class="grid" id="sg"></div></section>
+<section id="recipes"><h2>Recipes from our kitchen</h2><p class="sub">Free recipes to try at home.</p><div class="grid" id="rg"></div></section>
+<section id="request" class="alt-bg"><h2>Request a service</h2><p class="sub">Wedding tiers, corporate orders, baking classes or a design you have in mind. Tell us and we reply with a quote.</p>
+<div class="panel"><form id="rf"><div class="two"><div><label>Service</label><select id="rs"><option>Custom birthday cake</option><option>Wedding cake</option><option>Corporate or bulk order</option><option>Cupcakes and dessert table</option><option>Baking class</option></select></div><div><label>Event date</label><input type="date" id="rd" required></div></div>
+<div class="two"><div><label>Phone</label><input id="rp" type="tel" placeholder="07xx xxx xxx" required></div><div><label>Budget (KES)</label><input id="rb" type="number" min="0"></div></div>
+<label>Describe your idea</label><textarea id="rx" rows="4" placeholder="Flavour, size, theme, colours, number of guests" required></textarea>
+<button class="btn" style="margin-top:16px">Send request</button></form></div></section>
+
+<section id="portal"><h2>My portal</h2><p class="sub" id="ps"></p><div class="panel" id="pb"></div></section>
+<footer><h3 style="color:#fff">Sweet Caroline Cakes</h3><p>Nairobi, Kenya. Orders: <a href="tel:+254700000000">+254 700 000 000</a> (update this number). Made with love and butter.</p></footer>
+<div id="m"><div id="mb"><button id="x" aria-label="Close">&times;</button><div id="mc"></div></div></div><div id="t"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+/* 1. Paste your Firebase web config here. Leave apiKey empty to run in demo mode (data stays in this browser). */
+const CFG={apiKey:"",authDomain:"",projectId:"",appId:""};
+/* 2. Emails that get the admin dashboard. */
+const ADMINS=["owner@example.com"];
+const LIVE=!!CFG.apiKey;let db,auth;
+if(LIVE){firebase.initializeApp(CFG);db=firebase.firestore();auth=firebase.auth()}
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const S={cakes:[],supplies:[],recipes:[],orders:[],user:null,cart:[],cat:'All',mode:'in'};
+const kes=n=>'KES '+Number(n).toLocaleString();
+const toast=m=>{const t=$('#t');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2800)};
+const admin=()=>S.user&&ADMINS.includes(S.user.email);
+const SEED={cakes:[["Strawberry Dream",3200,"Birthday","Vanilla sponge, fresh strawberries, strawberry cream, white chocolate","#f7a8c4"],["Red Velvet Romance",3800,"Birthday","Cocoa, buttermilk, cream cheese frosting, red velvet crumb","#c2185b"],["Chocolate Drip",3500,"Birthday","Dark chocolate ganache, Belgian cocoa, chocolate sponge, gold leaf","#7b3f2a"],["Vanilla Rose Tiers",14000,"Wedding","Three tiers, vanilla bean sponge, Swiss meringue buttercream, sugar roses","#ffd1e3"],["Lemon Blueberry",2800,"Birthday","Lemon zest, blueberry compote, mascarpone cream","#c9b6f2"],["Cupcake Box of 12",1800,"Cupcakes","Assorted flavours, piped buttercream, sprinkles","#ffb703"]],
+supplies:[["Piping nozzle set (24 pcs)",1200,"Tools","Stainless steel with reusable bags","#f7a8c4"],["Gel food colour (12 pack)",1500,"Colours","Vibrant, non-bleeding","#e8467c"],["Cake boards 10in (5 pcs)",650,"Packaging","Foil-wrapped","#d9a441"],["Cake boxes 10in (3 pcs)",600,"Packaging","Window top, sturdy","#ffd1e3"]],
+recipes:[["Classic Vanilla Sponge",0,"Basics","250g flour, 250g butter, 250g sugar, 4 eggs, 2 tsp vanilla, 2 tsp baking powder","1. Heat oven to 170C and line two 8in tins. 2. Cream butter and sugar until pale. 3. Beat in eggs one at a time, then vanilla. 4. Fold in flour and baking powder. 5. Bake 25 minutes. 6. Cool fully before frosting.","#ffd1e3"],["Silky Buttercream",0,"Frosting","300g soft butter, 600g icing sugar, 3 tbsp milk, 1 tsp vanilla","1. Beat butter 5 minutes until pale. 2. Add sugar in batches on low speed. 3. Add milk and vanilla, then whip 3 minutes.","#f7a8c4"]]};
+/* Data layer: Firestore when configured, localStorage otherwise */
+const D={async list(c){if(LIVE){return(await db.collection(c).get()).docs.map(d=>({id:d.id,...d.data()}))}let r=JSON.parse(localStorage['sc_'+c]||'null');if(!r){r=(SEED[c]||[]).map((a,i)=>c==='recipes'?{id:'s'+i,name:a[0],price:0,cat:a[2],ingredients:a[3],steps:a[4],color:a[5]}:{id:'s'+i,name:a[0],price:a[1],cat:a[2],ingredients:a[3],color:a[4]});localStorage['sc_'+c]=JSON.stringify(r)}return r},
+async add(c,o){if(LIVE){await db.collection(c).add(o)}else{const r=await D.list(c);r.push({...o,id:'l'+Date.now()});localStorage['sc_'+c]=JSON.stringify(r)}},
+async upd(c,id,o){if(LIVE){await db.collection(c).doc(id).update(o)}else{const r=(await D.list(c)).map(x=>x.id===id?{...x,...o}:x);localStorage['sc_'+c]=JSON.stringify(r)}},
+async del(c,id){if(LIVE){await db.collection(c).doc(id).delete()}else{localStorage['sc_'+c]=JSON.stringify((await D.list(c)).filter(x=>x.id!==id))}}};
+async function load(){for(const c of['cakes','supplies','recipes'])S[c]=await D.list(c);
+ if(S.user){let o=await D.list('orders');if(!admin())o=o.filter(x=>x.uid===S.user.uid);S.orders=o.sort((a,b)=>b.created-a.created)}else S.orders=[];draw()}
+if(LIVE)auth.onAuthStateChanged(u=>{S.user=u?{uid:u.uid,email:u.email,name:u.displayName||u.email}:null;load()});
+else{S.user=JSON.parse(localStorage.sc_me||'null');load()}
+const cakeSvg=c=>`<svg viewBox="0 0 120 110"><rect x="12" y="62" width="96" height="36" rx="8" fill="${c}"/><rect x="28" y="36" width="64" height="30" rx="8" fill="${c}" opacity=".8"/><path d="M12 72q12 12 24 0t24 0 24 0 24 0v-10H12z" fill="#fff"/><path d="M28 46q8 10 16 0t16 0 16 0v-10H28z" fill="#fff"/><circle cx="60" cy="26" r="7" fill="#d9a441"/></svg>`;
+const im=x=>`<div class="im" style="background-color:${x.color||'#ffd1e3'}33;${x.img?`background-image:url(${x.img})`:''}">${x.img?'':cakeSvg(x.color||'#f7a8c4')}</div>`;
+const delB=(c,id)=>admin()?`<button class="btn alt sm" data-del="${c}|${id}">Delete</button>`:'';
+function draw(){
+ const cats=['All',...new Set(S.cakes.map(c=>c.cat))];
+ $('#ct').innerHTML=cats.map(c=>`<button class="${c===S.cat?'on':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+ $('#cg').innerHTML=S.cakes.filter(c=>S.cat==='All'||c.cat===S.cat).map(x=>`<div class="card">${im(x)}<div class="bd"><span class="tag">${esc(x.cat)}</span><h3>${esc(x.name)}</h3><small>${esc(x.ingredients)}</small><div class="row"><span class="price">${kes(x.price)}</span><button class="btn sm" data-add="cakes|${x.id}">Add to cart</button>${delB('cakes',x.id)}</div></div></div>`).join('')||'<p>No cakes yet.</p>';
+ $('#sg').innerHTML=S.supplies.map(x=>`<div class="card">${im(x)}<div class="bd"><span class="tag">${esc(x.cat)}</span><h3>${esc(x.name)}</h3><small>${esc(x.ingredients)}</small><div class="row"><span class="price">${kes(x.price)}</span><button class="btn sm" data-add="supplies|${x.id}">Add to cart</button>${delB('supplies',x.id)}</div></div></div>`).join('')||'<p>Shop opening soon.</p>';
+ $('#rg').innerHTML=S.recipes.map(x=>`<div class="card">${im(x)}<div class="bd"><span class="tag">${esc(x.cat)}</span><h3>${esc(x.name)}</h3><div class="row"><button class="btn sm" data-rec="${x.id}">View recipe</button>${delB('recipes',x.id)}</div></div></div>`).join('');
+ $('#cc').textContent=S.cart.reduce((a,b)=>a+b.q,0);$('#pB').textContent=S.user?'My portal':'Sign in';portal()}
+function portal(){const p=$('#pb');
+ if(!S.user){$('#ps').textContent='Sign in to place orders, send requests and track them.';
+  p.innerHTML=`<form id="af">${S.mode==='up'?'<label>Your name</label><input id="an" required>':''}<label>Email</label><input id="ae" type="email" required><label>Password</label><input id="ap" type="password" minlength="6" required><button class="btn" style="margin-top:16px">${S.mode==='up'?'Create account':'Sign in'}</button> <a href="#" id="sw">${S.mode==='up'?'I have an account':'Create an account'}</a></form>${LIVE?'':'<p style="margin-top:14px;font-size:.85rem">Demo mode: add your Firebase config to go live.</p>'}`;return}
+ $('#ps').textContent='Welcome, '+S.user.name;
+ let h=`<button class="btn alt sm" id="lo">Sign out</button><h3 style="margin:16px 0 4px">${admin()?'All orders and requests':'My orders and requests'}</h3>`;
+ h+=S.orders.map(o=>`<div class="o"><b>${o.kind==='request'?esc(o.service):'Order, '+kes(o.total)}</b> <span class="st ${o.status}">${o.status}</span><br><small>${o.kind==='order'?o.items.map(i=>i.q+' x '+esc(i.name)).join(', '):esc(o.details)}<br>For ${esc(o.date)} | ${esc(o.phone)}${admin()?' | '+esc(o.email):''}</small>${admin()?`<br><select data-st="${o.id}">${['Pending','Confirmed','Baking','Ready','Delivered'].map(s=>`<option ${s===o.status?'selected':''}>${s}</option>`).join('')}</select>`:''}</div>`).join('')||'<p>Nothing yet. Pick a cake and place your first order.</p>';
+ if(admin())h+=`<h3 style="margin:24px 0 4px">Add to the site</h3><form id="ad"><div class="two"><div><label>Type</label><select id="at"><option value="cakes">Cake</option><option value="supplies">Baking supply</option><option value="recipes">Recipe</option></select></div><div><label>Category</label><input id="ac" placeholder="Birthday, Wedding, Tools" required></div></div><div class="two"><div><label>Name</label><input id="am" required></div><div><label>Price (KES)</label><input id="ar" type="number" min="0" value="0"></div></div><label>Ingredients or description</label><textarea id="ai" rows="2" required></textarea><label>Recipe steps (recipes only)</label><textarea id="as" rows="2"></textarea><label>Photo</label><input type="file" id="af2" accept="image/*"><button class="btn" style="margin-top:14px">Publish</button></form>`;
+ p.innerHTML=h}
+const open=h=>{$('#mc').innerHTML=h;$('#m').classList.add('open')};const shut=()=>$('#m').classList.remove('open');
+function cart(){if(!S.cart.length)return open('<h3>Your cart is empty</h3>');const t=S.cart.reduce((a,b)=>a+b.p*b.q,0);
+ open(`<h3>Your cart</h3>${S.cart.map((i,n)=>`<p>${i.q} x ${esc(i.name)} <b>${kes(i.p*i.q)}</b> <a href="#" data-rm="${n}">remove</a></p>`).join('')}<p class="price">Total ${kes(t)}</p><form id="co"><div class="two"><div><label>Needed on</label><input type="date" id="cd" required></div><div><label>Phone</label><input id="cp" type="tel" required></div></div><label>Delivery address or pickup note</label><input id="ca" required><button class="btn" style="margin-top:14px">Place order</button></form>`)}
+const resize=f=>new Promise(r=>{if(!f)return r('');const i=new Image;i.onload=()=>{const k=Math.min(1,800/i.width),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);r(c.toDataURL('image/jpeg',.72))};i.src=URL.createObjectURL(f)});
+document.addEventListener('click',async e=>{const t=e.target.closest('[data-cat],[data-add],[data-rec],[data-del],[data-rm],#cartB,#pB,#x,#sw,#lo'),m=e.target.id==='m';if(m)return shut();if(!t)return;
+ const d=t.dataset;if(t.id!=='x'&&t.tagName==='A')e.preventDefault();
+ if(d.cat){S.cat=d.cat;draw()}
+ else if(d.add){const[c,id]=d.add.split('|'),x=S[c].find(v=>v.id===id),f=S.cart.find(v=>v.id===id);f?f.q++:S.cart.push({id,name:x.name,p:x.price,q:1});draw();toast(x.name+' added')}
+ else if(d.rec){const r=S.recipes.find(v=>v.id===d.rec);open(`<h3>${esc(r.name)}</h3><h4 style="margin:12px 0 4px">Ingredients</h4><p>${esc(r.ingredients)}</p><h4 style="margin:12px 0 4px">Method</h4><p>${esc(r.steps)}</p>`)}
+ else if(d.del){if(confirm('Delete this item?')){const[c,id]=d.del.split('|');await D.del(c,id);load()}}
+ else if(d.rm!==undefined){S.cart.splice(+d.rm,1);draw();cart()}
+ else if(t.id==='cartB')cart();else if(t.id==='x')shut();
+ else if(t.id==='pB')location.hash='portal';
+ else if(t.id==='sw'){S.mode=S.mode==='up'?'in':'up';portal()}
+ else if(t.id==='lo'){LIVE?auth.signOut():(localStorage.removeItem('sc_me'),S.user=null,load())}});
+document.addEventListener('change',async e=>{if(e.target.dataset.st){await D.upd('orders',e.target.dataset.st,{status:e.target.value});toast('Status updated');load()}});
+document.addEventListener('submit',async e=>{e.preventDefault();const id=e.target.id;
+ try{
+ if(id==='af'){const em=$('#ae').value.trim(),pw=$('#ap').value,nm=$('#an')?.value||em;
+  if(LIVE){S.mode==='up'?await auth.createUserWithEmailAndPassword(em,pw).then(r=>r.user.updateProfile({displayName:nm})):await auth.signInWithEmailAndPassword(em,pw)}
+  else{const u=JSON.parse(localStorage.sc_users||'{}');if(S.mode==='up'){if(u[em])throw Error('Account exists');u[em]={pw,nm};localStorage.sc_users=JSON.stringify(u)}else if(!u[em]||u[em].pw!==pw)throw Error('Wrong email or password');localStorage.sc_me=JSON.stringify(S.user={uid:em,email:em,name:u[em].nm});load()}}
+ else if(id==='co'){const items=S.cart.map(i=>({name:i.name,q:i.q}));if(!S.user){shut();location.hash='portal';return toast('Sign in to place your order')}
+  await D.add('orders',{kind:'order',uid:S.user.uid,email:S.user.email,items,total:S.cart.reduce((a,b)=>a+b.p*b.q,0),date:$('#cd').value,phone:$('#cp').value,details:$('#ca').value,status:'Pending',created:Date.now()});S.cart=[];shut();toast('Order placed. Track it in your portal.');load();location.hash='portal'}
+ else if(id==='rf'){if(!S.user){location.hash='portal';return toast('Sign in to send a request')}
+  await D.add('orders',{kind:'request',uid:S.user.uid,email:S.user.email,service:$('#rs').value,details:$('#rx').value+(+$('#rb').value?' | Budget '+kes($('#rb').value):''),date:$('#rd').value,phone:$('#rp').value,status:'Pending',created:Date.now()});e.target.reset();toast('Request sent. We will reply with a quote.');load()}
+ else if(id==='ad'){const t=$('#at').value,img=await resize($('#af2').files[0]);
+  await D.add(t,{name:$('#am').value,price:+$('#ar').value,cat:$('#ac').value,ingredients:$('#ai').value,steps:$('#as').value,img,color:'#f7a8c4'});toast('Published');load()}
+ }catch(err){toast(err.message)}});
+</script></body></html>
